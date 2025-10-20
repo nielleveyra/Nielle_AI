@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIELLE AI STYLE REFINER</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'soft-pink': '#FADADD',
+            'lilac': '#E6E6FA',
+            'mint-green': '#E0F2F1',
+            'cream': '#FFFDD0',
+            'pastel-bg': '#fdf6f8',
+            'pastel-card': '#ffffff',
+            'pastel-text': '#5b546e',
+            'pastel-accent': '#e2c6e9',
+            'pastel-accent-dark': '#c8a2c8',
+            // Dark Mode Palette
+            'dark-bg': '#1a1a2e',
+            'dark-card': '#2c2c3e',
+            'dark-text': '#d4d4d8',
+            'dark-accent': '#a78bfa',
+            'dark-accent-dark': '#8b5cf6',
+            'dark-border': '#4a4e69',
+          }
+        }
+      }
+    }
+  </script>
+
+<script>
+    // Prevents FOUC (Flash of Unstyled Content) for dark mode
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+</script>
+<link rel="stylesheet" href="index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-Df0bjhdL.js"></script>
+</head>
+<body class="bg-pastel-bg dark:bg-dark-bg">
+    <div id="root"></div>
+</body>
+</html>
